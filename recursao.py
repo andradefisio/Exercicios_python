@@ -77,15 +77,47 @@ Considere os três pontos definidos para o problema:
     
 3) n deve ser decrementado a cada chamada
 '''
-def fibonacci(n):
+def fibonacci_rec(n):
     if n == 0 or n == 1:
         return n
     else:
         resultado = fibonacci(n-1) + fibonacci(n-2)
         return resultado
     
-fibonacci(5)  
+fibonacci_rec(5)  
 #Out[23]: 5  
   
-fibonacci(6) 
+fibonacci_rec(6) 
 #Out[24]: 8
+
+# Calculo da sequencia de fibonacci pela iteração:
+    
+def fibonacci_it(n):
+    res = n
+    a, b = 0, 1
+    for k in range(2, n + 1):
+        res = a + b
+        a, b = b, res
+    return res
+
+# Há uma diferença calculando o valor de fibonacci na sequência usando o método
+# recursivo e pelo método iterativo
+
+
+import time
+
+n = 30
+start = time.time()
+
+print(fibonacci_rec(n))
+print('Recursive: {} seconds'.format(time.time() - start))
+#...:Recursive: 0.5086393356323242 seconds
+
+start = time.time()
+print(fibonacci_it(n))
+print('Iterative: {} seconds'.format(time.time() - start))
+#...:Iterative: 0.0009989738464355469 seconds
+
+## =========================================================================##
+
+# Recursão II
