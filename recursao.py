@@ -55,7 +55,7 @@ def fat(n):
     else:
         resultado = n * fat(n-1)
         return resultado
-
+fat(3)
 fat(2)
 # Out[11]: 2
 
@@ -64,6 +64,15 @@ fat(3)
 
 fat(5)
 # Out[13]: 120
+
+
+def f1(n): 
+    if n >= 1: 
+        return 1 
+    else: 
+        return n * f1(n - 1) 
+ 
+print(f1(4)) 
 
 '''
 Exercício
@@ -104,19 +113,46 @@ def fibonacci_it(n):
 # recursivo e pelo método iterativo
 
 
+
+# Definição da fç Fibonacci com "Memoização":
+    
+m = dict()
+def fibonacci_memoizacao(n):
+    if n < 2:
+        return n
+    elif m.get(n) != None:
+        return m[n]
+    else:
+        m[n] = fibonacci_memoizacao(n - 1) + fibonacci_memoizacao(n - 2)
+        return m[n]
+
+
+# Calculando o tempo de processamento
 import time
 
-n = 30
+n = 35
 start = time.time()
 
 print(fibonacci_rec(n))
 print('Recursive: {} seconds'.format(time.time() - start))
-#...:Recursive: 0.5086393356323242 seconds
+# 9227465
+# Recursive: 3.5555269718170166 seconds
 
 start = time.time()
 print(fibonacci_it(n))
 print('Iterative: {} seconds'.format(time.time() - start))
-#...:Iterative: 0.0009989738464355469 seconds
+# 9227465
+# Iterative: 0.0 seconds
+
+start = time.time()
+print(fibonacci_memoizacao(n))
+print('Memoization: {} seconds'.format(time.time() - start))
+# 9227465
+# Memoization: 0.0 seconds
+
+
+
+
 
 ## =========================================================================##
 
