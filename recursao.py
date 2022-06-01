@@ -157,3 +157,37 @@ print('Memoization: {} seconds'.format(time.time() - start))
 ## =========================================================================##
 
 # Recursão II
+
+# Exercícios
+
+# Dada uma lista l de n números, implemente uma função recursiva que retorna o maior
+# elemento do conjunto.
+
+def num_max(l):
+    if len(l) == 1:
+        return l[0]
+    else:
+        return max(l) 
+
+# Testes:        
+l = [1,3,5,7,9]
+num_max(l)
+
+lista2 = [0]
+num_max(lista2)
+
+
+# Dada uma lista de n números, implemente uma função recursiva que retorna a soma de
+# todos os elementos do conjunto.
+
+def soma_daLista(lista):
+    if len(lista) == 1:
+        return lista[0]
+    else:
+        return lista[0] + soma_daLista(lista[1: ])
+
+
+print(soma_daLista([1,3,5,7,9]))
+
+
+
