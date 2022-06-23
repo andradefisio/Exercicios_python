@@ -16,7 +16,7 @@
 # O que seria abstração ou abstraído? 
 # Conforme definição da wikipedia, a 'abstração' "é a habilidade de concentrar nos 
 # aspectos essenciais de um contexto qualquer, ignorando característas menos 
-# importantes ou acidentais" ( https://pt.wikipedia.org/wiki/Abstra%C3%A7%C3%A3o_(ci%C3%AAncia_da_computa%C3%A7%C3%A3o) ).
+# importantes ou acidentais" ( https://pt.wikipedia.org/wiki/Abstra%C3%A7%C3%A3o_(ci%C3%AAncia_da_computa%C3%A7%C3%A3o ).
 # Em modelagem orientada a objetos, uma CLASSE seria a abstração de entidades no domínio 
 # do sistema de software.
 
