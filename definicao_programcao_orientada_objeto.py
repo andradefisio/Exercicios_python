@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jun 23 13:54:42 2022
-
-@author: andra
+@author: andrade
 """
 
 # A linguagem de programação python, assim como outras, como por exemplo a linguagem R,
